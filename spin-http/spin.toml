@@ -1,0 +1,14 @@
+spin_version = "1"
+authors = ["Aleksei Trifonov <avrong@avrong.me>"]
+description = ""
+name = "spin-http"
+trigger = { type = "http", base = "/" }
+version = "0.1.0"
+
+[[component]]
+id = "spin-http"
+source = "target/wasm32-wasi/release/spin_http.wasm"
+[component.trigger]
+route = "/..."
+[component.build]
+command = "cargo build --target wasm32-wasi --release"
